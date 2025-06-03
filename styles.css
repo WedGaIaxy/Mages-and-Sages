@@ -31,16 +31,23 @@ h1 {
 .bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
   width: 360px;       /* changed from max-width to fixed width */
   min-height: 40px;
 }
 
+.segment-group {
+  display: flex;
+  gap: 0;                    /* No space between subsegments */
+}
+
+.segment-group + .segment-group {
+  margin-left: 6px;          /* Space between groups of 3 */
+}
+
 .segment {
-  width: 30px;
+  width: 10px;
   height: 30px;
-  box-sizing: border-box;
-  flex-shrink: 0; 
+  background-color: grey;
   transition: background-color 0.3s ease;
 }
 
