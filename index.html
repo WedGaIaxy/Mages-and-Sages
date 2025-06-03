@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>My Simple Site</title>
-  <style>
-    body {
-      background: white;
-      padding: 2em;
-      font-family: sans-serif;
-    }
-    .bar {
-      margin: 1em 0;
-      height: 30px;
-      background: lightgray;
-      position: relative;
-    }
-    .fill {
-      height: 100%;
-      width: 50%;
-      background: steelblue;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <h1>Mages & Sages stat tracker</h1>
 
-  <div class="bar"><div class="fill"></div></div>
-  <div class="bar"><div class="fill" style="background-color: tomato; width: 40%;"></div></div>
-  <div class="bar"><div class="fill" style="background-color: seagreen; width: 70%;"></div></div>
-  <div class="bar"><div class="fill" style="background-color: gold; width: 60%;"></div></div>
+
+  <div class="bar-container">
+    <div class="bar-label">Health</div>
+    <div class="bar" data-bar-id="0" data-color="#cc0000"></div>
+    <div class="buttons">
+      <button class="increase">+</button>
+      <button class="decrease">−</button>
+      <button class="grey-out">Expend</button>
+      <button class="restore">Regen</button>
+    </div>
+  </div>
+
+
+  <div class="bar-container">
+    <div class="bar-label">Stamina</div>
+    <div class="bar" data-bar-id="1" data-color=#6aa84f></div>
+    <div class="buttons">
+      <button class="increase">+</button>
+      <button class="decrease">−</button>
+      <button class="grey-out">Expend</button>
+      <button class="restore">Regen</button>
+    </div>
+  </div>
+
+  <div class="bar-container">
+    <div class="bar-label">Sanity</div>
+    <div class="bar" data-bar-id="2" data-color=#3d85c6></div>
+    <div class="buttons">
+      <button class="increase">+</button>
+      <button class="decrease">−</button>
+      <button class="grey-out">Expend</button>
+      <button class="restore">Regen</button>
+    </div>
+  </div>
+
+  <div class="bar-container">
+    <div class="bar-label">Mana</div>
+    <div class="bar" data-bar-id="3" data-color=#e69138></div>
+    <div class="buttons">
+      <button class="increase">+</button>
+      <button class="decrease">−</button>
+      <button class="grey-out">Expend</button>
+      <button class="restore">Regen</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
