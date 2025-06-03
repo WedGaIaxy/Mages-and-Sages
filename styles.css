@@ -18,7 +18,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  gap: 10x;
+  gap: 10px;
 }
 
 .bar-label {
@@ -30,25 +30,31 @@ h1 {
 
 .bar {
   display: flex;
-  flex-wrap: wrap;
-  width: 360px;       /* changed from max-width to fixed width */
+  flex-wrap: nowrap;
+  width: 360px;        /* Fixed width container */
   min-height: 40px;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .segment-group {
   display: flex;
-  gap: 0;                    /* No space between subsegments */
+  width: 32px;         /* Fixed width for major segment */
+  margin-right: 4px;   /* Gap between major segments */
+  box-sizing: border-box;
 }
 
-.segment-group + .segment-group {
-  margin-left: 6px;          /* Space between groups of 3 */
+.segment-group:last-child {
+  margin-right: 0;     /* No gap after last major segment */
 }
 
 .segment {
-  width: 10px;
+  flex: 1;             /* Subsegments share equal space inside major segment */
   height: 30px;
   background-color: grey;
   transition: background-color 0.3s ease;
+  margin: 0;           /* No gap between minor segments */
+  box-sizing: border-box;
 }
 
 .buttons {
@@ -80,3 +86,5 @@ button {
 button:hover {
   background-color: #bbb;
 }
+
+
